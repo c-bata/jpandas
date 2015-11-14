@@ -2,25 +2,28 @@
 
 JPandas is an implementation of [Pandas (Python Data Analysis Library)](http://pandas.pydata.org/) on java.
 
+In data science fields, We often use Python or R.
+Because these language offers some useful function for analyzing data.
+DataFrame is one of the powerful data structure for that.
+
+If we have great result of research, we make use of real world application.
+JPandas helps implementation on Android for analyzing data.
+
+
 ## Tutorial
 
 #### Define DataFrame
 
 ```
-Series<Double> series_a = new Series<Double>();
-series_a.add(3.0);
-series_a.add(5.0);
-Series<Double> series_b = new Series<Double>();
-series_b.add(9.0);
-series_b.add(20.0);
-
 DataFrame<String, Series> df = new DataFrame<String, Series>();
-df.put("feature_a", series_a);
-df.put("feature_b", series_b);
+
+df.put("feature_a", new Series<Double>(3.0, 8.0, 2.0, ...));
+df.put("feature_b", new Series<Integer>(4, 6, 10, -2, ...));
 ```
 
-#### Use pandas like method
+#### methods
 
+This library offers useful methods like pandas.
 
 - mean
 
