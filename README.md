@@ -12,6 +12,12 @@ JPandas helps implementation on Android for analyzing data.
 
 ## Tutorial
 
+#### Download
+
+```
+compile "com.c_bata:javadataframe:0.0.1"
+```
+
 #### Define DataFrame
 
 ```
