@@ -15,7 +15,7 @@ public class SeriesTest {
     }
 
     @Test
-    public void testIntegerSeriesMeanEquals5() {
+    public void testIntegerSeriesMean() {
         Series<Integer> series = new Series<Integer>();
         series.add(0);
         series.add(9);
@@ -23,10 +23,26 @@ public class SeriesTest {
     }
 
     @Test
-    public void testDoubleSeriesMeanEquals5() {
+    public void testDoubleSeriesMean() {
         Series<Double> series = new Series<Double>();
         series.add(0.0);
         series.add(9.0);
         assertThat(series.mean(), is(4.5));
+    }
+
+    @Test
+    public void testIntegerSeriesStd() {
+        Series<Integer> series = new Series<Integer>();
+        series.add(0);
+        series.add(1);
+        assertThat(series.std(), is(0.25));
+    }
+
+    @Test
+    public void testDoubleSeriesStd() {
+        Series<Double> series = new Series<Double>();
+        series.add(0.0);
+        series.add(1.0);
+        assertThat(series.std(), is(0.25));
     }
 }
