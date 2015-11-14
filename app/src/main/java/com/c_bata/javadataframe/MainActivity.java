@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.c_bata.DataFrame;
 import com.c_bata.Series;
 
 import java.util.Iterator;
@@ -33,14 +34,20 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Checking jpandas
-        Series series = new Series();
-        series.add(3);
-        series.add(5);
+        Series<Double> series_a = new Series<Double>();
+        series_a.add(3.0);
+        series_a.add(5.0);
+        Series<Double> series_b = new Series<Double>();
+        series_b.add(9.0);
+        series_b.add(20.0);
 
-        Iterator itr = series.iterator();
-        while (itr.hasNext()) {
-            Log.d("JPANDAS", (String) itr.next());
-        }
+        DataFrame<String, Series> df = new DataFrame<String, Series>();
+        df.put("feature_a", series_a);
+        df.put("feature_b", series_b);
+
+        // Log.d(df.mean());
+        Log.d("JPANDAS", String.valueOf(df.mean().get("feature_a")));
+        Log.d("JPANDAS", String.valueOf(df.mean().get("feature_b")));
     }
 
     @Override
