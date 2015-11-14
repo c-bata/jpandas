@@ -6,7 +6,7 @@ In data science fields, We often use Python or R.
 Because these language offers some useful function for analyzing data.
 DataFrame is one of the powerful data structure for that.
 
-If we have great result of research, we make use of real world application.
+If we have great result of research, we have to make use of real world application.
 JPandas helps implementation on Android for analyzing data.
 
 
