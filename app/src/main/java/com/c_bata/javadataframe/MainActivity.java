@@ -48,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
         // Log.d(df.mean());
         Log.d("JPANDAS", String.valueOf(df.mean().get("feature_a")));
         Log.d("JPANDAS", String.valueOf(df.mean().get("feature_b")));
+        // Log.d(df.std());
+        Log.d("JPANDAS", String.valueOf(df.std().get("feature_a")));
+        Log.d("JPANDAS", String.valueOf(df.std().get("feature_b")));
     }
 
     @Override
