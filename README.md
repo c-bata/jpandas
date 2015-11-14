@@ -1,4 +1,4 @@
-# PandasJ
+# JPandas
 
 Pandas (Python Data Analysis Library) for java
 
