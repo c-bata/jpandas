@@ -1,7 +1,28 @@
 apply plugin: 'java'
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+apply plugin: 'com.novoda.bintray-release'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.3.4'
+    }
+}
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile 'com.google.guava:guava:18.0'
+}
+
+publish {
+    userOrg = 'c-bata'
+    groupId = 'com.c_bata'
+    artifactId = 'jpandas'
+    publishVersion = '0.0.1'
+    desc = 'Implementation of Pandas (Python Data Analysis Library) on java'
+    website = 'https://github.com/c-bata/jpandas'
 }
