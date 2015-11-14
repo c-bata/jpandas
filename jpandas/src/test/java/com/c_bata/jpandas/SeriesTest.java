@@ -10,12 +10,15 @@ public class SeriesTest {
     @Test
     public void testSeriesIsEmpty() {
         Series series = new Series();
-        assertThat(0, is(series.size()));
+        series.add(0);
+        assertThat(series.size(), is(1));
     }
 
     @Test
-    public void testIntegerSeriesMeanEquals2() {
+    public void testIntegerSeriesMeanEquals5() {
         Series<Integer> series = new Series<Integer>();
-        assertThat(2, is(series.mean()));
+        series.add(0);
+        series.add(10);
+        assertThat(series.mean(), is(5));
     }
 }
