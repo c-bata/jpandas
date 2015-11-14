@@ -6,17 +6,10 @@ In data science fields, We often use Python or R.
 Because these language offers some useful function for analyzing data.
 DataFrame is one of the powerful data structure for that.
 
-If we have great result of research, we have to make use of real world application.
-JPandas helps implementation on Android for analyzing data.
+If we implement result of analysis to real application (for example android app), JPandas helps it.
 
 
 ## Tutorial
-
-#### Download
-
-```
-compile "com.c_bata:javadataframe:0.0.1"
-```
 
 #### Define DataFrame
 
