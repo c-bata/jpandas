@@ -29,4 +29,13 @@ public class Series<E> extends ArrayList<E> {
 
         return this.size() == 0 ? 0 : sum / this.size();
     }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for (E item : this) {
+            sb.append(String.format("%d\t%.3f\n", this.indexOf(item), item));
+        }
+        return new String(sb);
+    }
 }

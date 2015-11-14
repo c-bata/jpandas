@@ -45,4 +45,17 @@ public class SeriesTest {
         series.add(1.0);
         assertThat(series.std(), is(0.25));
     }
+
+    @Test
+    public void testToString() {
+        Series<Double> series = new Series<Double>();
+        series.add(0.0);
+        series.add(1.0);
+
+        StringBuilder expectedToString = new StringBuilder();
+        expectedToString.append("0\t0.000\n");
+        expectedToString.append("1\t1.000\n");
+
+        assertThat(series.toString(), is(new String(expectedToString)));
+    }
 }
